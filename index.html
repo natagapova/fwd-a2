@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="comics.html">Comics</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/myphoto2.JPEG" class="profile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/person.png">
+                    <div>
+                        <h2>About me</h2>
+                        <p>Hello, world! My name is Natalia Agapova. I am a first-year IU bachelor student.</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/heart.png">
+                    <div>
+                        <h2>My interests</h2>
+                        <p>I am interested in Front-end, UI/UX design, machine learning, and computer vision. My little trip to Front-end Web Development has only started so I don't know much about it, but yet I am very curious to know everything. This is my first site!</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/projects.png">
+                    <div>
+                        <h2>My projects</h2>
+                        <ul>
+                            <li>Right now I am in a team working on a stamp recognition service. I am a SCRUM manager, I organize the work process.</li>
+                            <li>As a part of my product management course, my team and I are working on a potential app for making online doctor appointments.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/glasses.png">
+                    <div>
+                        <h2>Some facts</h2>
+                        <ul>
+                            <li>I have been studying English for 15 years now. I have passed the Unified State Exam (EGE) for 100 points and have been hired to Skyeng.</li>
+                            <li>I really love mathematics, especially algebra and mathematical analysis.</li>
+                            <li>I love travelling and dancing!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Information</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function() {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downBtn.onclick = function() {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+</body>
+</html>
